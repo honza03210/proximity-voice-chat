@@ -1,5 +1,5 @@
 
-setTimeout(() => {}, 1000);
+setTimeout(() => {}, 10000);
 let urlParams = new URLSearchParams(window.location.search);
 
 document.getElementById("test1").innerHTML = urlParams.get("username") + " is trying to connect to room associated with server " + urlParams.get("server_id");

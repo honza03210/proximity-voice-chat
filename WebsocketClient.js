@@ -1,4 +1,4 @@
-setTimeout(function () { }, 1000);
+setTimeout(function () { }, 10000);
 var urlParams = new URLSearchParams(window.location.search);
 document.getElementById("test1").innerHTML = urlParams.get("username") + " is trying to connect to room associated with server " + urlParams.get("server_id");
 function connect() {
