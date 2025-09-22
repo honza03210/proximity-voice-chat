@@ -1,8 +1,5 @@
-function greet(name) {
-    return "Hello, ".concat(name, "!");
-}
-var message = greet("World");
-console.log(message);
+var urlParams = new URLSearchParams(window.location.search);
+document.getElementById("test").innerHTML = urlParams.get("username") + " is trying to connect to room associated with server " + urlParams.get("server_id");
 function connect() {
     var socket = new WebSocket("ws://localhost:4242");
     socket.onopen = function () {
