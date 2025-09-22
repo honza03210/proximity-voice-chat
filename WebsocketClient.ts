@@ -1,9 +1,7 @@
-function greet(name: string): string {
-    return `Hello, ${name}!`;
-}
 
-const message: string = greet("World");
-console.log(message);
+let urlParams = new URLSearchParams(window.location.search);
+
+document.getElementById("test").innerHTML = urlParams.get("username") + " is trying to connect to room associated with server " + urlParams.get("server_id");
 
 function connect(){
     let socket = new WebSocket("ws://localhost:4242");
